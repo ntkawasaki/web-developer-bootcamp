@@ -1,0 +1,23 @@
+h1 {
+    color: #000000;
+    /* border-color: purple;
+    border-width: 5px;
+    border-style: solid; */
+    border: 2px solid blue;
+}
+
+li {
+    color: rgb(0, 255, 0);
+}
+
+h4 {
+    background: rgb(255, 100, 150, 80);
+}
+
+body {
+    /* background: url("https://desktopwalls.net/wp-content/uploads/2015/08/Clear%20Green%20Mountain%20Lake%20Desktop%20Wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background: pink;
+
+}
