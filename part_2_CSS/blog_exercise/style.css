@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+    font-family: Helvetica;
+}
+
+h2 {
+    font-size: 2.0rem;
+    color: black;
+}
+
+.date {
+    color: #3796DB;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+#inner-body {
+    background-color: white;
+    max-width: 700px;
+    width: 70%;
+    margin: 30px auto;
+    text-align: justify;
+    padding: 20px;
+    border: 15px solid #3796DB;
+}
+
+.post {
+    margin: 10px;
+    padding: 10px;
+}
+
+.post p:first-of-type {
+    border-color: #bdc3c7;
+    border-left-width: 5px;
+    border-left-style: solid;
+    padding-left: 5px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    margin-left: 20px;
+    margin-right: 20px;
+}
