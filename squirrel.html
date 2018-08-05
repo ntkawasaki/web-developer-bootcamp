@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Squirrel Testing Laboratory</title>
-  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" type="text/css"> -->
+  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" type="text/css">
   <link rel="stylesheet" href="squirrel.css" type="text/css">
 </head>
 
@@ -215,242 +215,624 @@
               800px"
        src="part_1_HTML/responsive-images/elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
 
-    <h2>Resolution Switching</h2>
-    <img id="res-example" srcset="part_1_HTML/responsive-images/elva-fairy-320w.jpg,
-               part_1_HTML/responsive-images/elva-fairy-480w.jpg 1.5x,
-               part_1_HTML/responsive-images/elva-fairy-640w.jpg 2x"
-       src="part_1_HTML/responsive-images/elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
+  <h2>Resolution Switching</h2>
+  <img id="res-example" srcset="part_1_HTML/responsive-images/elva-fairy-320w.jpg,
+             part_1_HTML/responsive-images/elva-fairy-480w.jpg 1.5x,
+             part_1_HTML/responsive-images/elva-fairy-640w.jpg 2x"
+     src="part_1_HTML/responsive-images/elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
 
-    <h2>Art Direction</h2>
-    <!-- Switching the actual image file based on viewport size -->
+  <h2>Art Direction</h2>
+  <!-- Switching the actual image file based on viewport size -->
 
+  <img src="part_1_HTML/responsive-images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+
+  <picture>
+    <!-- If smaller than 799px, show this image -->
+    <source media="(max-width: 799px)" srcset="part_1_HTML/responsive-images/elva-480w-close-portrait.jpg">
+    <!-- If larger than 800px, show this image -->
+    <source media="(min-width: 800px)" srcset="part_1_HTML/responsive-images/elva-800w.jpg">
+    <!-- Required default image to show if none of above are true -->
     <img src="part_1_HTML/responsive-images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+  </picture>
 
-    <picture>
-      <!-- If smaller than 799px, show this image -->
-      <source media="(max-width: 799px)" srcset="part_1_HTML/responsive-images/elva-480w-close-portrait.jpg">
-      <!-- If larger than 800px, show this image -->
-      <source media="(min-width: 800px)" srcset="part_1_HTML/responsive-images/elva-800w.jpg">
-      <!-- Required default image to show if none of above are true -->
-      <img src="part_1_HTML/responsive-images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
-    </picture>
+  <!-- Tables -->
+  <h2>Dogs Table</h2>
+  <table>
+    <tr>
+      <td>&nbsp;</td>
+      <th scope="col">Knocky</th>
+      <th scope="col">Flor</th>
+      <th scope="col">Ella</th>
+      <th scope="col">Juan</th>
+    </tr>
+    <tr>
+      <th scope="row">Breed</th>
+      <td>Jack Russell</td>
+      <td>Poodle</td>
+      <td>Streetdog</td>
+      <td>Cocker Spaniel</td>
+    </tr>
+    <tr>
+      <th scope="row">Age</th>
+      <td>16</td>
+      <td>9</td>
+      <td>10</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th scope="row">Owner</th>
+      <td>Mother-in-law</td>
+      <td>Me</td>
+      <td>Me</td>
+      <td>Sister-in-law</td>
+    </tr>
+    <tr>
+      <th scope="row">Eating Habits</th>
+      <td>Eats everyone's leftovers</td>
+      <td>Nibbles at food</td>
+      <td>Hearty eater</td>
+      <td>Will eat till he explodes</td>
+    </tr>
+  </table>
 
-    <!-- Tables -->
-    <h2>Dogs Table</h2>
-    <table>
-      <tr>
-        <td>&nbsp;</td>
-        <th scope="col">Knocky</th>
-        <th scope="col">Flor</th>
-        <th scope="col">Ella</th>
-        <th scope="col">Juan</th>
-      </tr>
-      <tr>
-        <th scope="row">Breed</th>
-        <td>Jack Russell</td>
-        <td>Poodle</td>
-        <td>Streetdog</td>
-        <td>Cocker Spaniel</td>
-      </tr>
-      <tr>
-        <th scope="row">Age</th>
-        <td>16</td>
-        <td>9</td>
-        <td>10</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <th scope="row">Owner</th>
-        <td>Mother-in-law</td>
-        <td>Me</td>
-        <td>Me</td>
-        <td>Sister-in-law</td>
-      </tr>
-      <tr>
-        <th scope="row">Eating Habits</th>
-        <td>Eats everyone's leftovers</td>
-        <td>Nibbles at food</td>
-        <td>Hearty eater</td>
-        <td>Will eat till he explodes</td>
-      </tr>
-    </table>
+  <hr>
 
-    <hr>
+  <!-- Spanning multiple rows and columns -->
+  <h2>Animals Table</h2>
+  <table>
+    <tr>
+      <th colspan="2">Animals</th>
+    </tr>
+    <tr>
+      <th colspan="2">Hippopotamus</th>
+    </tr>
+    <tr>
+      <th rowspan="2">Horse</th>
+      <td>Mare</td>
+    </tr>
+    <tr>
+      <td>Stallion</td>
+    </tr>
+    <tr>
+      <th colspan="2">Crocodile</th>
+    </tr>
+    <tr>
+      <th rowspan="2">Chicken</th>
+      <td>Cock</td>
+    </tr>
+    <tr>
+      <td>Rooster</td>
+    </tr>
+  </table>
 
-    <!-- Spanning multiple rows and columns -->
-    <h2>Animals Table</h2>
-    <table>
-      <tr>
-        <th colspan="2">Animals</th>
-      </tr>
-      <tr>
-        <th colspan="2">Hippopotamus</th>
-      </tr>
-      <tr>
-        <th rowspan="2">Horse</th>
-        <td>Mare</td>
-      </tr>
-      <tr>
-        <td>Stallion</td>
-      </tr>
-      <tr>
-        <th colspan="2">Crocodile</th>
-      </tr>
-      <tr>
-        <th rowspan="2">Chicken</th>
-        <td>Cock</td>
-      </tr>
-      <tr>
-        <td>Rooster</td>
-      </tr>
-    </table>
+  <!-- Styling Tables -->
+  <h2>Colgroups</h2>
+  <table>
+    <colgroup>
+      <col style="color: red;">
+      <col style="background-color: yellow;">
+    </colgroup>
+    <tr>
+      <th>Data 1</th>
+      <th>Data 2</th>
+    </tr>
+    <tr>
+      <td>Calcutta</td>
+      <td>Orange</td>
+    </tr>
+    <tr>
+      <td>Robots</td>
+      <td>Jazz</td>
+    </tr>
+  </table>
 
-    <!-- Styling Tables -->
-    <h2>Colgroups</h2>
-    <table>
-      <colgroup>
-        <col style="color: red;">
-        <col style="background-color: yellow;">
-      </colgroup>
-      <tr>
-        <th>Data 1</th>
-        <th>Data 2</th>
-      </tr>
-      <tr>
-        <td>Calcutta</td>
-        <td>Orange</td>
-      </tr>
-      <tr>
-        <td>Robots</td>
-        <td>Jazz</td>
-      </tr>
-    </table>
+  <!-- Table Exercise -->
+  <h2>School timetable</h2>
+  <table>
+    <caption>Class schedule</caption>
+    <colgroup>
+      <col>
+      <col>
+      <col style="background-color: #97DB9A;">
+      <col style="width: 42px;">
+      <col style="background-color: #97DB9A;">
+      <col style="background-color:#DCC48E; border:4px solid #C1437A;">
+      <col style="width: 42px;">
+      <col style="width: 42px;">
+    </colgroup>
+    <tr>
+      <td>&nbsp;</td>
+      <th>Mon</th>
+      <th>Tues</th>
+      <th>Wed</th>
+      <th>Thurs</th>
+      <th>Fri</th>
+      <th>Sat</th>
+      <th>Sun</th>
+    </tr>
+    <tr>
+      <th>1st period</th>
+      <td>English</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>German</td>
+      <td>Dutch</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th>2nd period</th>
+      <td>English</td>
+      <td>English</td>
+      <td>&nbsp;</td>
+      <td>German</td>
+      <td>Dutch</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th>3rd period</th>
+      <td>&nbsp;</td>
+      <td>German</td>
+      <td>&nbsp;</td>
+      <td>German</td>
+      <td>Dutch</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th>4th period</th>
+      <td>&nbsp;</td>
+      <td>English</td>
+      <td>&nbsp;</td>
+      <td>English</td>
+      <td>Dutch</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
 
-    <!-- Table Exercise -->
-    <h2>School timetable</h2>
-    <table>
-      <caption>Class schedule</caption>
-      <colgroup>
-        <col>
-        <col>
-        <col style="background-color: #97DB9A;">
-        <col style="width: 42px;">
-        <col style="background-color: #97DB9A;">
-        <col style="background-color:#DCC48E; border:4px solid #C1437A;">
-        <col style="width: 42px;">
-        <col style="width: 42px;">
-      </colgroup>
+  <!-- Table Structure Exercise -->
+  <h2>My spending record</h2>
+  <table>
+    <caption>How I chose to spend my money</caption>
+    <thead>
       <tr>
-        <td>&nbsp;</td>
-        <th>Mon</th>
-        <th>Tues</th>
-        <th>Wed</th>
-        <th>Thurs</th>
-        <th>Fri</th>
-        <th>Sat</th>
-        <th>Sun</th>
+        <th scope="col">Purchase</th>
+        <th scope="col">Location</th>
+        <th scope="col">Date</th>
+        <th scope="col">Evaluation</th>
+        <th scope="col">Cost (€)</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
-        <th>1st period</th>
-        <td>English</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>German</td>
-        <td>Dutch</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th>2nd period</th>
-        <td>English</td>
-        <td>English</td>
-        <td>&nbsp;</td>
-        <td>German</td>
-        <td>Dutch</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th>3rd period</th>
-        <td>&nbsp;</td>
-        <td>German</td>
-        <td>&nbsp;</td>
-        <td>German</td>
-        <td>Dutch</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th>4th period</th>
-        <td>&nbsp;</td>
-        <td>English</td>
-        <td>&nbsp;</td>
-        <td>English</td>
-        <td>Dutch</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-    </table>
-
-    <!-- Table Structure Exercise -->
-    <h2>My spending record</h2>
-    <table>
-      <caption>How I chose to spend my money</caption>
-      <thead>
-        <tr>
-          <th>Purchase</th>
-          <th>Location</th>
-          <th>Date</th>
-          <th>Evaluation</th>
-          <th>Cost (€)</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>Haircut</td>
+        <td scope="row">Haircut</td>
         <td>Hairdresser</td>
         <td>12/09</td>
         <td>Great idea</td>
         <td>30</td>
       </tr>
       <tr>
-        <td>Lasagna</td>
+        <td scope="row">Lasagna</td>
         <td>Restaurant</td>
         <td>12/09</td>
         <td>Regrets</td>
         <td>18</td>
       </tr>
       <tr>
-        <td>Shoes</td>
+        <td scope="row">Shoes</td>
         <td>Shoeshop</td>
         <td>13/09</td>
         <td>Big regrets</td>
         <td>65</td>
       </tr>
       <tr>
-        <td>Toothpaste</td>
+        <td scope="row">Toothpaste</td>
         <td>Supermarket</td>
         <td>13/09</td>
         <td>Good</td>
         <td>5</td>
       </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="4">SUM</td>
-          <td>118</td>
-        </tr>
-      </tfoot>
-    </table>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">SUM</td>
+        <td>118</td>
+      </tr>
+    </tfoot>
+  </table>
 
-    <!-- Nesting Tables -->
+  <aside>
+    <h2>Random Side Bar</h2>
+    <ul>
+      <li><a href="#">Oh I do like to be beside the seaside</a></li>
+      <li><a href="#">Oh I do like to be beside the sea</a></li>
+      <li><a href="#">Although in the North of England</a></li>
+      <li><a href="#">It never stops raining</a></li>
+      <li><a href="#">Oh well...</a></li>
+    </ul>
+  </aside>
 
+  <!-- HTML Forms -->
+  <form action="" method="POST">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="user_name" placeholder="Default">
+    </div>
+    <div>
+      <label for="mail">E-mail:</label>
+      <input type="email" id="mail" name="user_mail" placeholder="Default">
+    </div>
+    <div>
+      <label for="msg">Message:</label>
+      <textarea id="msg" name="user_message" placeholder="Default"></textarea>
+    </div>
+    <div class="button">
+      <button type="submit">Send your message</button>
+    </div>
+  </form>
 
+  <hr>
 
+  <!-- fieldset and legend -->
+  <form>
+    <fieldset>
+      <legend>Fruit juice size</legend>
+      <p>
+        <input type="radio" name="size" id="size_1" value="small">
+        <label for="size_1">Small</label>
+      </p>
+      <p>
+        <input type="radio" name="size" id="size_2" value="medium">
+        <label for="size_2">Medium</label>
+      </p>
+      <p>
+        <input type="radio" name="size" id="size_3" value="large">
+        <label for="size_3">Large</label>
+      </p>
+    </fieldset>
 
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name">
 
+    <!-- Multiple labels-->
+    <div>
+      <p>Required fields are followed by <abbr title="required">*</abbr>.</p>
+      <label for="username">Name: <abbr title="required">*</abbr></label>
+      <input id="username" type="text" name="username">
+    </div>
+  </form>
+
+  <hr>
+
+  <!-- Active Learning Exercise -->
+  <form>
+    <h2>Payment Form</h2>
+    <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+
+    <section>
+      <!-- Contact Information -->
+        <h3>Contact information</h3>
+        <fieldset>
+          <legend>Title</legend>
+          <ul>
+              <li>
+                <label for="title_1">
+                  <input type="radio" id="title_1" name="title" value="M." >
+                  Mister
+                </label>
+              </li>
+              <li>
+                <label for="title_2">
+                  <input type="radio" id="title_2" name="title" value="Ms.">
+                  Miss
+                </label>
+              </li>
+          </ul>
+        </fieldset>
+        <p>
+          <label for="name">
+            <span>Name: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="text" id="name" name="username">
+        </p>
+        <p>
+          <label for="mail">
+            <span>E-mail: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="email" id="mail" name="usermail">
+        </p>
+        <p>
+          <label for="pwd">
+            <span>Password: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="password" id="pwd" name="password">
+        </p>
+    </section>
+
+    <!-- Payment Information -->
+    <section>
+      <h3>Payment Information</h3>
+      <p>
+        <label for="card">
+          <span>Card Type:</span>
+        </label>
+        <select id="card" name="usercard">
+          <option value="visa">Visa</option>
+          <option value="mc">Mastercard</option>
+          <option value="amex">American Express</option>
+        </select>
+      </p>
+      <p>
+        <label for="number">
+          <span>Number:</span>
+          <strong><abbr title="required">*</abbr></strong>
+          <input type="text" id="number" placeholder="cardnumber">
+        </label>
+      </p>
+      <p>
+        <label for="date">
+          <span>Date:</span>
+          <strong><abbr title="required">*</abbr></strong>
+          <em>formatted as  mm/dd/yyyy</em>
+        </label>
+        <input type="text" id="date" placeholder="expiration">
+      </p>
+    </section>
+
+    <p><button type="submit">Validate the payment</button></p>
+    <input type="reset" value="This is a reset button">
+  </form>
+
+  <hr>
+
+  <!-- The Native Form Widgets -->
+  <h2>Native Form Widgets</h2>
+
+  <!-- Text Input Fields -->
+  <div>
+    <label for="comment">Comment:</label>
+    <input type="text" id="comment" name="comment" value="I'm a text field">
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" multiple>
+  </div>
+  <div>
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" name="pwd">
+  </div>
+  <div>
+    <label for="search">Search</label>
+    <input type="search" id="search" name="search">
+  </div>
+  <div>
+    <label for="tel">Phone:</label>
+    <input type="tel" id="tel" name="tel">
+  </div>
+  <div>
+    <label for="url">URL:</label>
+    <input type="url" id="url" name="url">
+  </div>
+  <div>
+    <label for="textarea">Textbox:</label>
+    <textarea id="textarea" cols="30" rows="10">Where default values are.</textarea>
   </div>
 
+  <!-- Drop-down Content -->
+  <div>
+    <label for="dropdown">Select your fruit or vegetable</label>
+    <select id="dropdown">
+      <optgroup label="fruits">
+        <option>Banana</option>
+        <option selected>Cherry</option>
+        <option>Blueberry</option>
+      </optgroup>
+      <optgroup label="vegetables">
+        <option>Carrot</option>
+        <option>Eggplant</option>
+        <option>Lettuce</option>
+      </optgroup>
+    </select>
+  </div>
+
+  <!-- Multiple choice -->
+  <div>
+    <label for="multi">Select your fruit or vegetable</label>
+    <select multiple id="multi" name="multi">
+      <option>Banana</option>
+      <option>Cherry</option>
+      <option>Lemon</option>
+    </select>
+  </div>
+
+  <!-- Autocomplete -->
+  <!-- Some browsers dont support datalist, work around on MDN -->
+  <label for="myFruit">What's your favorite fruit?</label>
+  <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+
+  <datalist id="mySuggestion">
+    <option>Apple</option>
+    <option>Banana</option>
+    <option>Blackberry</option>
+    <option>Blueberry</option>
+    <option>Lemon</option>
+    <option>Lychee</option>
+    <option>Peach</option>
+    <option>Pear</option>
+  </datalist>
+
+  <!-- Checkable Items -->
+  <div>
+    <label for="carrots">Carrots:</label>
+    <input type="checkbox" checked id="carrots" name="carrots" value="carrots">
+  </div>
+  <div>
+    <label for="soup">Soup:</label>
+    <input type="radio" id="soup" name="meal">
+  </div>
+
+  <fieldset>
+    <legend>What is your favorite meal?</legend>
+    <ul>
+      <li>
+        <label for="soup">Soup</label>
+        <input type="radio" checked id="soup" name="meal" value="soup">
+      </li>
+      <li>
+        <label for="curry">Curry</label>
+        <input type="radio" id="curry" name="meal" value="curry">
+      </li>
+      <li>
+        <label for="pizza">Pizza</label>
+        <input type="radio" id="pizza" name="meal" value="pizza">
+      </li>
+    </ul>
+  </fieldset>
+
+  <!-- Buttons -->
+  <!-- Submit -->
+  <div>
+    <button type="submit">
+      This a <br><strong>submit button</strong>
+    </button>
+
+    <input type="submit" value="This is a submit button">
+  </div>
+
+  <!-- Reset -->
+  <div>
+    <button type="reset">
+        This a <br><strong>reset button</strong>
+    </button>
+
+    <input type="reset" value="This is a reset button">
+  </div>
+
+  <!-- Anonymous -->
+  <div>
+    <button type="button">
+        This an <br><strong>anonymous button</strong>
+    </button>
+
+    <input type="button" value="This is an anonymous button">
+  </div>
+
+  <!-- Advanced Form Widgets -->
+  <div>
+    <label for="age">Numbers</label>
+    <input type="number" name="age" id="age" min="1" max="10" step="2">
+  </div>
+  <div>
+    <label for="beans">Sliders</label>
+    <input type="range" name="beans" id="beans" min="0" max="500" step="10">
+  </div>
+  <h4>Dates and times</h4>
+  <div>
+    <label for="datetime">Dates</label>
+    <input type="datetime-local" name="datetime" id="datetime">
+  </div>
+  <div>
+    <label for="month">Month and Year</label>
+    <input type="month" name="month" id="month">
+  </div>
+  <div>
+    <label for="color">Color Picker</label>
+    <input type="color" name="color" id="color">
+  </div>
+
+  <!-- Other Widgets -->
+  <div>
+    <label for="file">File Picker</label>
+    <input type="file" name="file" id="file" accept="image/*" multiple>
+  </div>
+  <div>
+    <label for="timestamp">Hidden</label>
+    <input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+  </div>
+  <div>
+    <label for="image_button">Image Button</label>
+    <input id="image_button" type="image" alt="Click me!" src="my-img.png" width="80" height="30" />
+  </div>
+  <div>
+    <h4>Progress Bar</h4>
+    <progress max="100" value="75">75/100</progress>
+  </div>
+  <div>
+    <h4>Meter</h4>
+    <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+  </div>
+
+  <!-- Sending Form Data -->
+  <!-- GET -->
+  <form action="http://foo.com" method="GET">
+    <h3>GET</h3>
+    <div>
+      <label for="say">What greeting do you want to say?</label>
+      <input name="say" id="say" placeholder="Hi">
+    </div>
+    <div>
+      <label for="to">Who do you want to say it to?</label>
+      <input name="to" id="to" placeholder="Mom">
+    </div>
+    <div>
+      <button>Send my greetings</button>
+    </div>
+  </form>
+
+  <hr>
+
+  <!-- POST -->
+  <form action="http://foo.com" method="POST">
+    <h3>POST</h3>
+    <div>
+      <label for="say">What greeting do you want to say?</label>
+      <input name="say" id="say" value="Hi">
+    </div>
+    <div>
+      <label for="to">Who do you want to say it to?</label>
+      <input name="to" id="to" value="Mom">
+    </div>
+    <div>
+      <button>Send my greetings</button>
+    </div>
+  </form>
+
+  <hr>
+
+  <!-- Sending Files -->
+  <form method="post" enctype="multipart/form-data">
+    <div>
+      <label for="file">Choose a file</label>
+      <input type="file" id="file" name="myFile">
+    </div>
+    <div>
+      <button>Send the file</button>
+    </div>
+  </form>
+
+  <!-- Form Validation -->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Close container -->
+  </div>
 </body>
 
 </html>
