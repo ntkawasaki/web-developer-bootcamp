@@ -112,3 +112,45 @@ input:invalid {
 input:valid {
   border: 2px solid black;
 }
+
+/* Pseudo-class styling */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+li:nth-of-type(odd) {
+  background-color: #ccc;
+}
+
+li:nth-of-type(even) {
+  background-color: #eee;
+}
+
+/* All elements with an attribute "href" with values
+   starting with "http" will have an arrow added after their
+   content (to indicate they are external links) */
+[href^=http]::after {
+  content: '⤴';
+}
+
+p::first-line {
+  font-weight: bold;
+}
+
+#pelement::first-letter {
+  font-size: 3em;
+  border: 1px solid black;
+  background: red;
+  display: block;
+  float: left;
+  padding: 2px;
+  margin-right: 4px;
+}
+
+/* Combinators */
