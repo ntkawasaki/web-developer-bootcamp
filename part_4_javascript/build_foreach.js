@@ -1,5 +1,5 @@
 function myForEach(arr, func) {
-  for (var i=0; i<arr.length; i++) {
+  for (var i = 0; i < arr.length; i++) {
     func(arr[i]);
   }
 }
@@ -12,7 +12,7 @@ myForEach(colors, function(color) {
 })
 
 Array.prototype.myForEach2 = function(func) {
-  for (var i=0; i<this.length; i++) {
+  for (var i = 0; i < this.length; i++) {
     func(this[i]);
   }
 }

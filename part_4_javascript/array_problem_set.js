@@ -5,7 +5,7 @@ function printReverse(arr) {
   })
 }
 
-var list = [1,2,3,4];
+var list = [1, 2, 3, 4];
 var alpha = ["A", "B", "C"]
 printReverse(list);
 printReverse(alpha);
@@ -45,4 +45,4 @@ function max(arr) {
 }
 
 max(list);
-max([-1000, 3, 43, 12,500]);
+max([-1000, 3, 43, 12, 500]);
