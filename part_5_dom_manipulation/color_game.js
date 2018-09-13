@@ -4,7 +4,22 @@ var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
+var resetButton = document.getElementById("reset")
 colorDisplay.textContent = pickedColor;
+
+
+// Reset Button functionality
+resetButton.addEventListener("click", function() {
+  colors = generateRandomColors(6);
+  pickedColor = pickColor();
+  colorDisplay.textContent = pickedColor;
+
+  for (var i = 0; i < squares.length; i++) {
+    // Add initial colors
+    squares[i].style.backgroundColor = colors[i];
+  }
+  h1.style.backgroundColor = "#232323"
+})
 
 
 for (var i = 0; i < squares.length; i++) {
@@ -18,13 +33,13 @@ for (var i = 0; i < squares.length; i++) {
 
     if (clickedColor === pickedColor) {
       messageDisplay.textContent = "Correct"
+      resetButton.textContent = "Play Again"
       changeColors(clickedColor);
     } else {
       this.style.backgroundColor = "#232323"
       messageDisplay.textContent = "Try Again"
     }
   })
-
 }
 
 
@@ -33,7 +48,6 @@ function changeColors(color) {
   for (var i = 0; i < squares.length; i++) {
     squares[i].style.background = color;
   }
-
   h1.style.background = color;
 }
 
@@ -41,7 +55,6 @@ function changeColors(color) {
 // Pick one of the colors to be the correct color
 function pickColor() {
   var num = Math.floor(Math.random() * colors.length);
-
   return colors[num];
 }
 
@@ -52,7 +65,6 @@ function generateRandomColors(num) {
   for (var i = 0; i < num; i++) {
     arr.push(randomColor());
   }
-
   return arr;
 }
 
@@ -63,6 +75,5 @@ function randomColor() {
   for (var i = 0; i < 3; i++) {
     temp[i] = Math.floor(Math.random() * 256);
   }
-
   return "rgb(" + temp[0] + ", " + temp[1] + ", " + temp[2] + ")";
 }
